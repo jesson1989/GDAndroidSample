@@ -2,7 +2,6 @@ package yjs.gd.com.gdandroidsample.main;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
