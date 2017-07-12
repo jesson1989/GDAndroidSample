@@ -55,7 +55,7 @@ public class ChatFragment extends Fragment {
 
         ChatInfo cf5=new ChatInfo();
         cf5.setType(0);
-        cf5.setMessage("开好房间等你，呵呵");
+        cf5.setMessage("快点进啊！");
         cf5.setmIcon(BitmapFactory.decodeResource(getResources(),R.drawable.ninja));
 
         ChatInfo cf6=new ChatInfo();
