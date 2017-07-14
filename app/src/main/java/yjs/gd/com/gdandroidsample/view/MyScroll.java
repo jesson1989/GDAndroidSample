@@ -74,28 +74,28 @@ public class MyScroll extends ViewGroup {
                 mLastMotionY = y;
                 break;
             case MotionEvent.ACTION_MOVE:
-                float dy=mLastMotionY-y;
+                float dy=y-mLastMotionY;
                 if (!mScroller.isFinished()){
                     mScroller.abortAnimation();
                 }
                 if(getScrollY()<0){
-                    if(dy<0){
+                    if(-dy<0){
                         dy=0;
                     }
                 }
                 if(getScrollY()>getHeight()*2/3){
-                    if(dy>0){
+                    if(-dy>0){
                         dy=0;
                     }
                 }
-                if(dy>0){
+                if(-dy>0){
                     Log.e("hahah","------->1");
                     objAnimation(1);
                 }else{
                     Log.e("hahah","------->2");
                     objAnimation(0);
                 }
-                scrollBy(0,(int)dy);
+                scrollBy(0,(int)-dy);
 
                 mLastMotionY=y;
                 break;
