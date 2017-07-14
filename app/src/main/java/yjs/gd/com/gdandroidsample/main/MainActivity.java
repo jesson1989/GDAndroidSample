@@ -8,6 +8,7 @@ import android.os.Bundle;
 import yjs.gd.com.gdandroidsample.R;
 
 import yjs.gd.com.gdandroidsample.fragment.ChatFragment;
+import yjs.gd.com.gdandroidsample.fragment.MyScrollViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
 
-                Fragment fragment = new ChatFragment();
+                Fragment fragment = new MyScrollViewFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.container, fragment)
                         .commit();

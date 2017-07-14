@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="false"/>
+
+    <yjs.gd.com.gdandroidsample.view.MyScroll
+        android:id="@+id/my_scroll_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hesui">
+        </ImageView>
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pc">
+        </ImageView>
+        <ImageView
+            android:id="@+id/image_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ppcc">
+        </ImageView>
+
+    </yjs.gd.com.gdandroidsample.view.MyScroll>
+
+</LinearLayout>
