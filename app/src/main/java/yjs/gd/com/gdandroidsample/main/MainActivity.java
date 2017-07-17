@@ -9,6 +9,7 @@ import yjs.gd.com.gdandroidsample.R;
 
 import yjs.gd.com.gdandroidsample.fragment.ChatFragment;
 import yjs.gd.com.gdandroidsample.fragment.MyScrollViewFragment;
+import yjs.gd.com.gdandroidsample.fragment.MySlideMenuFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
 
-                Fragment fragment = new MyScrollViewFragment();
+                Fragment fragment = new MySlideMenuFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.container, fragment)
                         .commit();
