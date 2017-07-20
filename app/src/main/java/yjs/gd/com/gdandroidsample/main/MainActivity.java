@@ -7,9 +7,8 @@ import android.os.Bundle;
 
 import yjs.gd.com.gdandroidsample.R;
 
-import yjs.gd.com.gdandroidsample.fragment.ChatFragment;
-import yjs.gd.com.gdandroidsample.fragment.MyScrollViewFragment;
-import yjs.gd.com.gdandroidsample.fragment.MySlideMenuFragment;
+import yjs.gd.com.gdandroidsample.fragment.MyPointViewFragment;
+import yjs.gd.com.gdandroidsample.fragment.VideoFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
 
-                Fragment fragment = new MySlideMenuFragment();
+                Fragment fragment = new MyPointViewFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.container, fragment)
                         .commit();
