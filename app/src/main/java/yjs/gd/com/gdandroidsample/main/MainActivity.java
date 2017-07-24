@@ -9,6 +9,7 @@ import yjs.gd.com.gdandroidsample.R;
 
 import yjs.gd.com.gdandroidsample.fragment.MyPointViewFragment;
 import yjs.gd.com.gdandroidsample.fragment.VideoFragment;
+import yjs.gd.com.gdandroidsample.fragment.XfermodeFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
 
-                Fragment fragment = new MyPointViewFragment();
+                Fragment fragment = new XfermodeFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.container, fragment)
                         .commit();
