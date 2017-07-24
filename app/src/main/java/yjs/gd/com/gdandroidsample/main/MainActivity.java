@@ -8,6 +8,7 @@ import android.os.Bundle;
 import yjs.gd.com.gdandroidsample.R;
 
 import yjs.gd.com.gdandroidsample.fragment.MyPointViewFragment;
+import yjs.gd.com.gdandroidsample.fragment.QRCodeFragment;
 import yjs.gd.com.gdandroidsample.fragment.VideoFragment;
 import yjs.gd.com.gdandroidsample.fragment.XfermodeFragment;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getFragmentManager();
 
-                Fragment fragment = new XfermodeFragment();
+                Fragment fragment = new QRCodeFragment();
                 fragmentManager.beginTransaction()
                         .add(R.id.container, fragment)
                         .commit();
