@@ -38,11 +38,20 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.test_scan_qrcode:
+                showScanQRcodeFragment();
                 break;
             case R.id.test_generate_qrcode:
                 showGenerateQRcodeFragment();
                 break;
         }
+    }
+    public void showScanQRcodeFragment(){
+        Fragment fragment = new ScanQRCodeFragment();
+        FragmentManager fragManager = getActivity().getFragmentManager();
+        fragManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
     public void showGenerateQRcodeFragment(){
         Fragment fragment = new GenerateQRCodeFragment();

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.bingoogolapple.qrcode.core.BGAQRCodeUtil;
@@ -24,7 +25,9 @@ import yjs.gd.com.gdandroidsample.utils.QRCodeEncoder;
 public class GenerateQRCodeFragment extends Fragment {
 
 
-    private ImageView mEnglishIv;
+    private ImageView mQrCodeIv;
+    private TextView mQrCodeTv;
+
     public String mQRCode;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,12 +44,13 @@ public class GenerateQRCodeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.generate_qrcode_layout,
                 container, false);
-        mEnglishIv = (ImageView) rootView.findViewById(R.id.iv_english);
-        createEnglishQRCode();
+        mQrCodeIv = (ImageView) rootView.findViewById(R.id.qrcode_iv);
+        mQrCodeTv = (TextView)  rootView.findViewById(R.id.qrcode_content);
+        createQRCode();
         return rootView;
 
     }
-    private void createEnglishQRCode() {
+    private void createQRCode() {
 
         if((TextUtils.isEmpty(mQRCode))){
             return;
@@ -64,9 +68,10 @@ public class GenerateQRCodeFragment extends Fragment {
             @Override
             protected void onPostExecute(Bitmap bitmap) {
                 if (bitmap != null) {
-                    mEnglishIv.setImageBitmap(bitmap);
+                    mQrCodeIv.setImageBitmap(bitmap);
+                    mQrCodeTv.setText(mQRCode);
                 } else {
-                    Toast.makeText(getContext(), "生成英文二维码失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "生成二维码失败", Toast.LENGTH_SHORT).show();
                 }
             }
         }.execute();

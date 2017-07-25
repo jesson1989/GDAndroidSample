@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                android:id="@+id/chat_fragment"
+                style="@style/AutoWrapTv"
+                android:text="聊天界面" />
+
+            <TextView
+                android:id="@+id/qrcode_fragment"
+                style="@style/AutoWrapTv"
+                android:text="二维码功能" />
+
+            <TextView
+                android:id="@+id/point_view_fragment"
+                style="@style/AutoWrapTv"
+                android:text="光圈效果" />
+
+            <TextView
+                android:id="@+id/scroll_view_fragment"
+                style="@style/AutoWrapTv"
+                android:text="ScrollView" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                android:id="@+id/slide_menu_fragment"
+                style="@style/AutoWrapTv"
+                android:text="侧拉滑效果" />
+
+            <TextView
+                android:id="@+id/video_fragment"
+                style="@style/AutoWrapTv"
+                android:text="调用系统播放器" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                android:id="@+id/xfermode_fragment"
+                style="@style/AutoWrapTv"
+                android:text="刮刮乐" />
+
+            <TextView
+                android:id="@+id/stop_preview"
+                style="@style/AutoWrapTv"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/scan_barcode"
+                style="@style/AutoWrapTv"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/scan_qrcode"
+                style="@style/AutoWrapTv"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                android:id="@+id/open_flashlight"
+                style="@style/AutoWrapTv"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/close_flashlight"
+                style="@style/AutoWrapTv"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/choose_qrcde_from_gallery"
+                style="@style/AutoWrapTv"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>

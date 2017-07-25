@@ -7,13 +7,13 @@
 
 
     <ImageView
-        android:id="@+id/iv_english"
+        android:id="@+id/qrcode_iv"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerInParent="true" />
     <TextView
-        android:id="@+id/test_scan_qrcode"
-        android:layout_below="@id/iv_english"
+        android:id="@+id/qrcode_content"
+        android:layout_below="@id/qrcode_iv"
         style="@style/MatchWrapTv"
         android:text=""/>
 
