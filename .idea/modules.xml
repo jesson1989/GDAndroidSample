@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GDAndroidSample.iml" filepath="$PROJECT_DIR$/GDAndroidSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GDAndroidSample.git.iml" filepath="$PROJECT_DIR$/GDAndroidSample.git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
