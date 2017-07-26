@@ -56,7 +56,7 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener {
     public void showGenerateQRcodeFragment(){
         Fragment fragment = new GenerateQRCodeFragment();
         Bundle args = new Bundle();
-        args.putString("QR_CODE","2017072910308888");
+        args.putString("QR_CODE","2017072910309999");
         fragment.setArguments(args);
         FragmentManager fragManager = getActivity().getFragmentManager();
         fragManager.beginTransaction()
