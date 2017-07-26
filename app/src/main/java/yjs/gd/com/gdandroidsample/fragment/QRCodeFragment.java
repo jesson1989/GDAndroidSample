@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import yjs.gd.com.gdandroidsample.R;
+import yjs.gd.com.gdandroidsample.main.TestScanActivity;
 
 /**
  * Created by Jesson_Yi on 2017/7/24.
@@ -46,6 +47,8 @@ public class QRCodeFragment extends Fragment implements View.OnClickListener {
         }
     }
     public void showScanQRcodeFragment(){
+
+//        getActivity().startActivity(new Intent(getActivity(), TestScanActivity.class));
         Fragment fragment = new ScanQRCodeFragment();
         FragmentManager fragManager = getActivity().getFragmentManager();
         fragManager.beginTransaction()

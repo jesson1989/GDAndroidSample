@@ -3,8 +3,10 @@ package yjs.gd.com.gdandroidsample.fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -33,6 +35,25 @@ public class ScanQRCodeFragment extends Fragment implements QRCodeView.Delegate 
             Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
     private QRCodeView mQRCodeView;
+    private Handler mHandler =new Handler();
+
+    private Runnable startScanRunnable= new Runnable() {
+        @Override
+        public void run() {
+            mQRCodeView.startCamera();
+            mQRCodeView.showScanRect();
+            mQRCodeView.startSpot();
+
+        }
+    };
+    private Runnable stopScanRunnable= new Runnable() {
+        @Override
+        public void run() {
+            mQRCodeView.stopCamera();
+            mQRCodeView.onDestroy();
+
+        }
+    };
 
     @Nullable
     @Override
@@ -48,34 +69,33 @@ public class ScanQRCodeFragment extends Fragment implements QRCodeView.Delegate 
     @Override
     public void onStart() {
         super.onStart();
-        mQRCodeView.startCamera();
-//        mQRCodeView.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT);
-
-        mQRCodeView.showScanRect();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        mQRCodeView.startSpot();
+        mHandler.postDelayed(startScanRunnable,5);
     }
 
     @Override
     public void onStop() {
         mQRCodeView.stopCamera();
+
         super.onStop();
     }
 
     @Override
-    public void onDestroy() {
+    public void onDestroyView() {
         mQRCodeView.onDestroy();
+
         super.onDestroy();
     }
     @Override
     public void onScanQRCodeSuccess(String result) {
         Log.i(TAG, "result:" + result);
-//        Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
         vibrate();
+        showScanResultFragment(result);
         mQRCodeView.startSpot();
     }
 
@@ -101,6 +121,19 @@ public class ScanQRCodeFragment extends Fragment implements QRCodeView.Delegate 
                     REQUEST_SCAN_QRCODE
             );
         }
+    }
+    public void showScanResultFragment(String result){
+        getFragmentManager().popBackStack();
+        Fragment fragment = new QRCodeScanResultFragment();
+        Bundle args = new Bundle();
+        args.putString("QR_CODE",result);
+        fragment.setArguments(args);
+        FragmentManager fragManager = getActivity().getFragmentManager();
+        fragManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
+
     }
 
 
