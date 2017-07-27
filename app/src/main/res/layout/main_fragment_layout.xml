@@ -48,9 +48,9 @@
                 android:text="刮刮乐" />
 
             <TextView
-                android:id="@+id/stop_preview"
+                android:id="@+id/timeaxle_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="时间轴" />
 
             <TextView
                 android:id="@+id/scan_barcode"
