@@ -53,9 +53,9 @@
                 android:text="时间轴" />
 
             <TextView
-                android:id="@+id/scan_barcode"
+                android:id="@+id/avatar_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="圆角头像" />
 
             <TextView
                 android:id="@+id/scan_qrcode"

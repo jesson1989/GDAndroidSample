@@ -25,6 +25,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     TextView videoTv;
     TextView xfermodeTv;
     TextView timeaxleTv;
+    TextView avatarTv;
 
 
     @Nullable
@@ -40,6 +41,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         videoTv = (TextView) rootView.findViewById(R.id.video_fragment);
         xfermodeTv = (TextView) rootView.findViewById(R.id.xfermode_fragment);
         timeaxleTv = (TextView) rootView.findViewById(R.id.timeaxle_fragment);
+        avatarTv = (TextView) rootView.findViewById(R.id.avatar_fragment);
+
 
         chatTv.setOnClickListener(this);
         qrcodeTv.setOnClickListener(this);
@@ -49,7 +52,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         videoTv.setOnClickListener(this);
         xfermodeTv.setOnClickListener(this);
         timeaxleTv.setOnClickListener(this);
-
+        avatarTv.setOnClickListener(this);
 
         return rootView;
 
@@ -82,9 +85,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case R.id.timeaxle_fragment:
                 type=7;
                 break;
-//            case R.id.open_flashlight:
-//                type=8;
-//                break;
+            case R.id.avatar_fragment:
+                type=8;
+                break;
 //            case R.id.close_flashlight:
 //                type=9;
 //                break;
@@ -136,6 +139,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             case 7:
                 fragment =new TimeAxleFragment();
+                break;
+            case 8:
+                fragment =new AvatarFragment();
                 break;
             default:
                 fragment =new ChatFragment();
