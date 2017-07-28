@@ -59,11 +59,11 @@ public class TimeAxleFragment extends Fragment {
         item1.setTime("03-14 08:13");
         item1.setStatus(1);
         TrackingInfo item2 = new TrackingInfo();
-        item2.setTitle("已支付");
+        item2.setTitle("已装车");
         item2.setTime("03-14 22:32");
         item2.setStatus(1);
         TrackingInfo item3 = new TrackingInfo();
-        item3.setTitle("商品出库");
+        item3.setTitle("配送中");
         item3.setTime("03-15 00:33");
         item3.setStatus(0);
         TrackingInfo item4 = new TrackingInfo();

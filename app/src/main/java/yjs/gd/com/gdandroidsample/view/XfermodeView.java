@@ -70,7 +70,8 @@ public class XfermodeView extends View {
         // 这里使用DST_IN模式，乍看，会以为是显示有衣服的图片，其实这里ALpha的值为0，所以
         //有衣服的图片也显示不出来了的。
         //同样这里如果用DST_OUT做的话，这里使用Alpha为255也能实现这一点。
-        //当然针对这个功能来说直接使用CLEAR模式是最简单不过了。
+        //当然针对这个功能来说直接使用CLEAR模式是最简单不过
+        //PS:在使用PorterDuffXfermode 进行图层混合时，并不是简单的只进行图层的计算，同时也会去计算透明通道的值。才形成这样的效果。
 
         mCanvas.drawBitmap(temp_Bitmap,0,0,null);
         mPath = new Path() ;
