@@ -58,9 +58,9 @@
                 android:text="圆角头像" />
 
             <TextView
-                android:id="@+id/scan_qrcode"
+                android:id="@+id/slide_del_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="侧滑删除" />
         </LinearLayout>
 
         <LinearLayout style="@style/MatchWrap.Horizontal">
