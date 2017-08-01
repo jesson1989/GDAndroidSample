@@ -44,6 +44,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         avatarTv = (TextView) rootView.findViewById(R.id.avatar_fragment);
 
 
+
+        
         chatTv.setOnClickListener(this);
         qrcodeTv.setOnClickListener(this);
         pointTv.setOnClickListener(this);
