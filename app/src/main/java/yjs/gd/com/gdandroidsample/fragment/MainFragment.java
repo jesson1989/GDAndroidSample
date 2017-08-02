@@ -27,6 +27,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     TextView timeaxleTv;
     TextView avatarTv;
     TextView slideDelTv;
+    TextView payTv;
 
 
     @Nullable
@@ -44,6 +45,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         timeaxleTv = (TextView) rootView.findViewById(R.id.timeaxle_fragment);
         avatarTv = (TextView) rootView.findViewById(R.id.avatar_fragment);
         slideDelTv = (TextView) rootView.findViewById(R.id.slide_del_fragment);
+        payTv =(TextView) rootView.findViewById(R.id.pay_fragment);
 
 
 
@@ -58,6 +60,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         timeaxleTv.setOnClickListener(this);
         avatarTv.setOnClickListener(this);
         slideDelTv.setOnClickListener(this);
+        payTv.setOnClickListener(this);
 
         return rootView;
 
@@ -96,9 +99,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case R.id.slide_del_fragment:
                 type=9;
                 break;
-//            case R.id.scan_barcode:
-//                type=10;
-//                break;
+            case R.id.pay_fragment:
+                type=10;
+                break;
 //            case R.id.scan_qrcode:
 //                type=11;
 //                break;
@@ -150,6 +153,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             case 9:
                 fragment =new SlideDelRecyclerViewFragment();
+                break;
+            case 10:
+                fragment =new PayFragment();
                 break;
             default:
                 fragment =new ChatFragment();

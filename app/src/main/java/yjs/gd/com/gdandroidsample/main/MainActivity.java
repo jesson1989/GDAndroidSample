@@ -2,6 +2,7 @@ package yjs.gd.com.gdandroidsample.main;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +21,7 @@ import yjs.gd.com.gdandroidsample.fragment.QRCodeFragment;
 import yjs.gd.com.gdandroidsample.fragment.VideoFragment;
 import yjs.gd.com.gdandroidsample.fragment.XfermodeFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

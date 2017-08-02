@@ -10,4 +10,14 @@
 
     <color name="colorPrimaryDarkTrans">#CCf57257</color>
     <color name="red_ff4a57">#ff4a57</color>
+
+
+    <color name="gray_text">#919191</color>
+    <color name="gray_btn">#EBEBEB</color>
+
+    <color name="gray_bg">#f0eff5</color>
+    <color name="gray_line">#ebebeb</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_text">#212121</color>
 </resources>

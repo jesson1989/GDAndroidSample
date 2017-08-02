@@ -66,9 +66,9 @@
         <LinearLayout style="@style/MatchWrap.Horizontal">
 
             <TextView
-                android:id="@+id/open_flashlight"
+                android:id="@+id/pay_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="支付输入" />
 
             <TextView
                 android:id="@+id/close_flashlight"
