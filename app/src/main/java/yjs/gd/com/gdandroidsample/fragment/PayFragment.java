@@ -52,8 +52,8 @@ public class PayFragment extends Fragment implements PayPwdView.InputCallBack ,V
 
         PayDialogFragment fragment = new PayDialogFragment();
         fragment.setArguments(bundle);
-        fragment.setPaySuccessCallBack(PayFragment.this);
-        fragment.show(getActivity().getSupportFragmentManager(),"Pay");
+        fragment.setPaySuccessCallBack(this);
+        fragment.show(getActivity().getFragmentManager(),"Pay");
     }
 
 }

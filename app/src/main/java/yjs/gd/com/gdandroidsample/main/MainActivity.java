@@ -21,7 +21,7 @@ import yjs.gd.com.gdandroidsample.fragment.QRCodeFragment;
 import yjs.gd.com.gdandroidsample.fragment.VideoFragment;
 import yjs.gd.com.gdandroidsample.fragment.XfermodeFragment;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
