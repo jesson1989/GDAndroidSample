@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/aidl_tv"
+        style="@style/MatchWrapTv"
+        android:text="获取远程服务对象"/>
+
+    <TextView
+        android:id="@+id/aidl_tv1"
+        style="@style/MatchWrapTv"
+        android:text="获取流量信息"/>
+    <LinearLayout
+        android:id="@+id/flow_info_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        >
+    <yjs.gd.com.gdandroidsample.widget.PercentView
+        android:id="@+id/percent_usage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        >
+    </yjs.gd.com.gdandroidsample.widget.PercentView>
+
+        <TextView
+            android:id="@+id/flow_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/flow_set"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_marginLeft="50dp"
+            android:gravity="center_vertical"
+            >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <yjs.gd.com.gdandroidsample.view.DragViewGroup
+    <yjs.gd.com.gdandroidsample.widget.DragViewGroup
         android:id="@+id/my_scroll_layout"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
@@ -23,6 +23,6 @@
             android:src="@drawable/ppcc">
         </ImageView>
 
-    </yjs.gd.com.gdandroidsample.view.DragViewGroup>
+    </yjs.gd.com.gdandroidsample.widget.DragViewGroup>
 
 </LinearLayout>

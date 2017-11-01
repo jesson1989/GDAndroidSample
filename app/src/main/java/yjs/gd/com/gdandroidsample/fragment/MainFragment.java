@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import yjs.gd.com.gdandroidsample.R;
-import yjs.gd.com.gdandroidsample.view.XfermodeView;
 
 /**
  * Created by Jesson_Yi on 2017/7/25.
@@ -28,6 +27,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     TextView avatarTv;
     TextView slideDelTv;
     TextView payTv;
+    TextView aidlTv;
 
 
     @Nullable
@@ -46,6 +46,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         avatarTv = (TextView) rootView.findViewById(R.id.avatar_fragment);
         slideDelTv = (TextView) rootView.findViewById(R.id.slide_del_fragment);
         payTv =(TextView) rootView.findViewById(R.id.pay_fragment);
+        aidlTv = (TextView) rootView.findViewById(R.id.aidl_fragment);
 
 
 
@@ -61,6 +62,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         avatarTv.setOnClickListener(this);
         slideDelTv.setOnClickListener(this);
         payTv.setOnClickListener(this);
+        aidlTv.setOnClickListener(this);
 
         return rootView;
 
@@ -101,6 +103,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.pay_fragment:
                 type=10;
+                break;
+            case R.id.aidl_fragment:
+                type=11;
                 break;
 //            case R.id.scan_qrcode:
 //                type=11;
@@ -156,6 +161,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                 break;
             case 10:
                 fragment =new PayFragment();
+                break;
+            case 11:
+                fragment =new AIDLFragment();
                 break;
             default:
                 fragment =new ChatFragment();

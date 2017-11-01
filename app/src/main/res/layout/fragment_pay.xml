@@ -51,7 +51,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center" />
 
-        <yjs.gd.com.gdandroidsample.view.PayPwdView
+        <yjs.gd.com.gdandroidsample.widget.PayPwdView
             android:id="@+id/payPwdView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
     </LinearLayout>
 
 
-    <yjs.gd.com.gdandroidsample.view.PwdInputMethodView
+    <yjs.gd.com.gdandroidsample.widget.PwdInputMethodView
         android:id="@+id/inputMethodView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

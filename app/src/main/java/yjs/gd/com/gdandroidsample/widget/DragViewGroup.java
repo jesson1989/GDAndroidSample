@@ -1,18 +1,12 @@
-package yjs.gd.com.gdandroidsample.view;
+package yjs.gd.com.gdandroidsample.widget;
 
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
-import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.Scroller;
 
 /**
  * Created by Jesson_Yi on 2017/7/14.

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,6 @@ import java.util.List;
 import yjs.gd.com.gdandroidsample.R;
 import yjs.gd.com.gdandroidsample.adapter.TimeAxleAdapter;
 import yjs.gd.com.gdandroidsample.bean.TrackingInfo;
-import yjs.gd.com.gdandroidsample.view.MyScroll;
 
 /**
  * Created by Jesson_Yi on 2017/7/27.

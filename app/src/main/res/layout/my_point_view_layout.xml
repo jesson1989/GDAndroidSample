@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<yjs.gd.com.gdandroidsample.view.PointViewGroup
+<yjs.gd.com.gdandroidsample.widget.PointViewGroup
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <yjs.gd.com.gdandroidsample.view.PointView
+    <yjs.gd.com.gdandroidsample.widget.PointView
         android:id="@+id/spot_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.999"
         android:visibility="invisible" />
 
-</yjs.gd.com.gdandroidsample.view.PointViewGroup>
+</yjs.gd.com.gdandroidsample.widget.PointViewGroup>

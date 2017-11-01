@@ -14,13 +14,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.bingoogolapple.qrcode.core.QRCodeView;
 import yjs.gd.com.gdandroidsample.R;
-import yjs.gd.com.gdandroidsample.view.ZXingView;
+import yjs.gd.com.gdandroidsample.widget.ZXingView;
 
 import static android.content.Context.VIBRATOR_SERVICE;
 

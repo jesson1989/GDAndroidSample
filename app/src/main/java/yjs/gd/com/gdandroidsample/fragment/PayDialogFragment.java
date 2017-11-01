@@ -13,8 +13,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import yjs.gd.com.gdandroidsample.R;
-import yjs.gd.com.gdandroidsample.view.PayPwdView;
-import yjs.gd.com.gdandroidsample.view.PwdInputMethodView;
+import yjs.gd.com.gdandroidsample.widget.PayPwdView;
+import yjs.gd.com.gdandroidsample.widget.PwdInputMethodView;
 
 /**
  * Created by Jesson_Yi on 2017/8/2.

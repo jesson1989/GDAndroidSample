@@ -71,9 +71,9 @@
                 android:text="支付输入" />
 
             <TextView
-                android:id="@+id/close_flashlight"
+                android:id="@+id/aidl_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="AIDL调用" />
 
             <TextView
                 android:id="@+id/choose_qrcde_from_gallery"

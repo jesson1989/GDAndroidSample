@@ -1,4 +1,4 @@
-package yjs.gd.com.gdandroidsample.view;
+package yjs.gd.com.gdandroidsample.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

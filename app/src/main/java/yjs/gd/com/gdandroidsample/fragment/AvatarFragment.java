@@ -6,8 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import yjs.gd.com.gdandroidsample.view.AvatarView;
-import yjs.gd.com.gdandroidsample.view.XfermodeView;
+import yjs.gd.com.gdandroidsample.widget.AvatarView;
 
 /**
  * Created by jesson on 2017/7/28.

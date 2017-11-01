@@ -1,21 +1,15 @@
 package yjs.gd.com.gdandroidsample.main;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 
 import cn.bingoogolapple.qrcode.core.QRCodeView;
 import yjs.gd.com.gdandroidsample.R;
-import yjs.gd.com.gdandroidsample.view.ZXingView;
+import yjs.gd.com.gdandroidsample.widget.ZXingView;
 
 public class TestScanActivity extends AppCompatActivity implements QRCodeView.Delegate {
     private static final String TAG = TestScanActivity.class.getSimpleName();
