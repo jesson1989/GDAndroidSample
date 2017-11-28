@@ -27,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fragmentManager = getFragmentManager();
+        if(savedInstanceState==null){
+            FragmentManager fragmentManager = getFragmentManager();
 
-        Fragment fragment = new MainFragment();
-        fragmentManager.beginTransaction()
-                .add(R.id.container, fragment)
-                .commit();
+            Fragment fragment = new MainFragment();
+            fragmentManager.beginTransaction()
+                    .add(R.id.container, fragment)
+                    .commit();
+
+        }
+
 
     }
 }

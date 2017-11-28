@@ -75,10 +75,31 @@ public class SlideDelRecyclerViewFragment extends Fragment{
         item4.setTime("03-15 15:55");
         item4.setStatus(0);
 
+        TrackingInfo item5 = new TrackingInfo();
+        item5.setTitle("已签收");
+        item5.setTime("03-15 15:55");
+        item5.setStatus(0);
+
+        TrackingInfo item6 = new TrackingInfo();
+        item6.setTitle("已签收");
+        item6.setTime("03-15 15:55");
+        item6.setStatus(0);
+
+        TrackingInfo item7 = new TrackingInfo();
+        item7.setTitle("已签收");
+        item7.setTime("03-15 15:55");
+        item7.setStatus(0);
+
+
+
         datas.add(item1);
         datas.add(item2);
         datas.add(item3);
         datas.add(item4);
+
+//        datas.add(item5);
+//        datas.add(item6);
+//        datas.add(item7);
     }
 
 
