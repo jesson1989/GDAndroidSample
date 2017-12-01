@@ -28,6 +28,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     TextView slideDelTv;
     TextView payTv;
     TextView aidlTv;
+    TextView tabPagerTv;
 
 
     @Nullable
@@ -47,6 +48,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         slideDelTv = (TextView) rootView.findViewById(R.id.slide_del_fragment);
         payTv =(TextView) rootView.findViewById(R.id.pay_fragment);
         aidlTv = (TextView) rootView.findViewById(R.id.aidl_fragment);
+        tabPagerTv = (TextView)rootView.findViewById(R.id.tab_pager_fragment);
 
 
 
@@ -63,6 +65,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         slideDelTv.setOnClickListener(this);
         payTv.setOnClickListener(this);
         aidlTv.setOnClickListener(this);
+        tabPagerTv.setOnClickListener(this);
 
         return rootView;
 
@@ -107,9 +110,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case R.id.aidl_fragment:
                 type=11;
                 break;
-//            case R.id.scan_qrcode:
-//                type=11;
-//                break;
+            case R.id.tab_pager_fragment:
+                type=12;
+                break;
 //            case R.id.choose_qrcde_from_gallery:
 //                type=12;
 //                break;
@@ -165,8 +168,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case 11:
                 fragment =new AIDLFragment();
                 break;
+            case 12:
+                fragment =new TabPagerFragment();
+                break;
             default:
-                fragment =new ChatFragment();
+                fragment =new TabPagerFragment();
                 break;
         }
         return fragment;

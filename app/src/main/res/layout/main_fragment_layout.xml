@@ -76,8 +76,8 @@
                 android:text="AIDL调用" />
 
             <TextView
-                android:id="@+id/choose_qrcde_from_gallery"
+                android:id="@+id/tab_pager_fragment"
                 style="@style/AutoWrapTv"
-                android:text="" />
+                android:text="TabPager" />
         </LinearLayout>
     </LinearLayout>
