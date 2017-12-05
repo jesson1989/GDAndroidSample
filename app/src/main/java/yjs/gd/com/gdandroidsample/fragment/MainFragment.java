@@ -29,6 +29,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     TextView payTv;
     TextView aidlTv;
     TextView tabPagerTv;
+    TextView verTv;
+    TextView mVerTv;
 
 
     @Nullable
@@ -49,6 +51,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         payTv =(TextView) rootView.findViewById(R.id.pay_fragment);
         aidlTv = (TextView) rootView.findViewById(R.id.aidl_fragment);
         tabPagerTv = (TextView)rootView.findViewById(R.id.tab_pager_fragment);
+        verTv = (TextView)rootView.findViewById(R.id.verification_fragment);
+        mVerTv = (TextView) rootView.findViewById(R.id.my_verification_fragment);
+
 
 
 
@@ -66,6 +71,8 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         payTv.setOnClickListener(this);
         aidlTv.setOnClickListener(this);
         tabPagerTv.setOnClickListener(this);
+        verTv.setOnClickListener(this);
+        mVerTv.setOnClickListener(this);
 
         return rootView;
 
@@ -113,9 +120,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case R.id.tab_pager_fragment:
                 type=12;
                 break;
-//            case R.id.choose_qrcde_from_gallery:
-//                type=12;
-//                break;
+            case R.id.verification_fragment:
+                type=13;
+                break;
+            case R.id.my_verification_fragment:
+                type=14;
+                break;
         }
         showFragment(type);
     }
@@ -171,8 +181,14 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case 12:
                 fragment =new TabPagerFragment();
                 break;
+            case 13:
+                fragment =new VerificationFragment();
+                break;
+            case 14:
+                fragment = new MyVerificationFragment();
+                break;
             default:
-                fragment =new TabPagerFragment();
+                fragment =new MyVerificationFragment();
                 break;
         }
         return fragment;

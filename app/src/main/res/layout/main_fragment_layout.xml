@@ -80,4 +80,24 @@
                 style="@style/AutoWrapTv"
                 android:text="TabPager" />
         </LinearLayout>
+
+
+
+    <LinearLayout style="@style/MatchWrap.Horizontal">
+
+        <TextView
+            android:id="@+id/verification_fragment"
+            style="@style/AutoWrapTv"
+            android:text="验证码" />
+
+        <TextView
+            android:id="@+id/my_verification_fragment"
+            style="@style/AutoWrapTv"
+            android:text="自定义验证码" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tab_pager_fragment"-->
+            <!--style="@style/AutoWrapTv"-->
+            <!--android:text="TabPager" />-->
+    </LinearLayout>
     </LinearLayout>

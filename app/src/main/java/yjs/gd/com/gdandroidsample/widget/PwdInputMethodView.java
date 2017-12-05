@@ -38,12 +38,12 @@ public class PwdInputMethodView extends LinearLayout implements View.OnClickList
         findViewById(R.id.btn_0).setOnClickListener(this);
         findViewById(R.id.btn_del).setOnClickListener(this);
 
-        findViewById(R.id.layout_hide).setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setVisibility(GONE);
-            }
-        });
+//        findViewById(R.id.layout_hide).setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setVisibility(GONE);
+//            }
+//        });
     }
 
     @Override

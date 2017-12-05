@@ -1,15 +1,23 @@
 package yjs.gd.com.gdandroidsample.fragment;
 
+import android.app.DialogFragment;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,47 +27,57 @@ import yjs.gd.com.gdandroidsample.R;
 import yjs.gd.com.gdandroidsample.utils.QRCodeEncoder;
 
 /**
- * Created by Jesson_Yi on 2017/7/24.
+ * Created by jesson_yi on 2017/12/4.
  */
 
-public class GenerateQRCodeFragment extends Fragment {
-
-
-    private ImageView mQrCodeIv;
-    private TextView mQrCodeTv;
-
+public class QRCodeDialogFragment extends DialogFragment {
+    private int failCount = 0;
+    TextView textupper;
+    ImageView fingerPrint;
+    private Context mContext;
     public String mQRCode;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = getActivity();
+        setStyle(DialogFragment.STYLE_NORMAL,android.R.style.Theme_DeviceDefault_Light_Dialog_Alert);
         Bundle args = getArguments();
         if (args != null) {
             mQRCode = args.getString("QR_CODE");
         }
+
     }
-
-
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.generate_qrcode_layout,
-                container, false);
-        mQrCodeIv = (ImageView) rootView.findViewById(R.id.qrcode_iv);
-        mQrCodeIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                QRCodeDialogFragment fragment =new QRCodeDialogFragment();
-                Bundle args = new Bundle();
-                args.putString("QR_CODE","2017072910309999");
-                fragment.setArguments(args);
-                fragment.show(getFragmentManager(),"FingerPrintDialog");
-            }
-        });
-        mQrCodeTv = (TextView)  rootView.findViewById(R.id.qrcode_content);
+
+        Window window = getDialog().getWindow();
+        WindowManager.LayoutParams lp = window.getAttributes();
+        lp.gravity = Gravity.CENTER;
+        window.setAttributes(lp);
+
+        View view = inflater.inflate(R.layout.generate_qrcode_layout, container, false);
+        textupper = (TextView) view.findViewById(R.id.qrcode_content);
+        fingerPrint = (ImageView)view.findViewById(R.id.qrcode_iv);
         createQRCode();
-        return rootView;
+
+        return view;
+    }
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
 
     }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+    }
+
+
     private void createQRCode() {
 
         if((TextUtils.isEmpty(mQRCode))){
@@ -78,14 +96,12 @@ public class GenerateQRCodeFragment extends Fragment {
             @Override
             protected void onPostExecute(Bitmap bitmap) {
                 if (bitmap != null) {
-                    mQrCodeIv.setImageBitmap(bitmap);
-                    mQrCodeTv.setText(mQRCode);
+                    fingerPrint.setImageBitmap(bitmap);
+                    textupper.setText(mQRCode);
                 } else {
                     Toast.makeText(getContext(), "生成二维码失败", Toast.LENGTH_SHORT).show();
                 }
             }
         }.execute();
     }
-
-
 }
