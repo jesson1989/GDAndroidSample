@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
 
-    <yjs.gd.com.gdandroidsample.widget.VerificationCodeInput
+    <yjs.gd.com.gdandroidsample.widget.VerificationCodeView1
         android:digits="1234567890"
         android:id="@+id/verificationCodeInput"
         android:layout_width="match_parent"

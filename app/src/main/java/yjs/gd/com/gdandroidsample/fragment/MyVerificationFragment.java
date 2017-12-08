@@ -52,10 +52,6 @@ public class MyVerificationFragment extends Fragment{
         }
         dialogFragment.show(getFragmentManager(),"sss");
     }
-
-
-
-
     @Override
     public void onDestroy() {
         super.onDestroy();

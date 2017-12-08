@@ -7,8 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import yjs.gd.com.gdandroidsample.R;
 import yjs.gd.com.gdandroidsample.widget.VerificationCodeInput;
+import yjs.gd.com.gdandroidsample.widget.VerificationCodeView;
+import yjs.gd.com.gdandroidsample.widget.VerificationCodeView1;
 
 /**
  * Created by jesson_yi on 2017/12/4.
@@ -16,16 +22,22 @@ import yjs.gd.com.gdandroidsample.widget.VerificationCodeInput;
 
 public class VerificationFragment extends Fragment {
 
-    private VerificationCodeInput verificationCodeInput1;
+
+    VerificationCodeView1 mVerificationView;
+    InputDialogFragment dialogFragment;
 
 
-
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
+    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.verification_layout,
                 container, false);
-        verificationCodeInput1 = (VerificationCodeInput)rootView.findViewById(R.id.verificationCodeInput);
+        mVerificationView = (VerificationCodeView1)rootView.findViewById(R.id.verificationCodeInput);
 
 //        verificationCodeInput.setOnCompleteListener(new VerificationCodeInput.Listener() {
 //            @Override
@@ -40,5 +52,22 @@ public class VerificationFragment extends Fragment {
 
         return rootView;
 
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.POSTING,priority = 100,sticky = true)
+    public void showVerificationView(String event){
+        EventBus.getDefault().removeStickyEvent(event);
+        if(dialogFragment==null){
+            dialogFragment = new InputDialogFragment();
+            dialogFragment.setInputReceiver(mVerificationView);
+        }
+        dialogFragment.setInputReceiver(mVerificationView);
+        dialogFragment.show(getFragmentManager(),"sss");
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 }
