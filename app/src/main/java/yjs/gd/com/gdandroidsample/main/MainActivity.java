@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         if(savedInstanceState==null){
             FragmentManager fragmentManager = getFragmentManager();
-            Log.e("haha","---------->haha");
+            Log.e("haha","---------->haha1111111");
 
             Fragment fragment = new MainFragment();
             fragmentManager.beginTransaction()
