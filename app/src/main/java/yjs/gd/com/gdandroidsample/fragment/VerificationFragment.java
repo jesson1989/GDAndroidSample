@@ -14,7 +14,6 @@ import org.greenrobot.eventbus.ThreadMode;
 import yjs.gd.com.gdandroidsample.R;
 import yjs.gd.com.gdandroidsample.widget.VerificationCodeInput;
 import yjs.gd.com.gdandroidsample.widget.VerificationCodeView;
-import yjs.gd.com.gdandroidsample.widget.VerificationCodeView1;
 
 /**
  * Created by jesson_yi on 2017/12/4.
@@ -23,7 +22,7 @@ import yjs.gd.com.gdandroidsample.widget.VerificationCodeView1;
 public class VerificationFragment extends Fragment {
 
 
-    VerificationCodeView1 mVerificationView;
+    VerificationCodeView mVerificationView;
     InputDialogFragment dialogFragment;
 
 
@@ -37,7 +36,7 @@ public class VerificationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.verification_layout,
                 container, false);
-        mVerificationView = (VerificationCodeView1)rootView.findViewById(R.id.verificationCodeInput);
+        mVerificationView = (VerificationCodeView)rootView.findViewById(R.id.verificationCodeInput);
 
 //        verificationCodeInput.setOnCompleteListener(new VerificationCodeInput.Listener() {
 //            @Override
